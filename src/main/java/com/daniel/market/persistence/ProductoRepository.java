@@ -5,6 +5,7 @@ import com.daniel.market.domain.repository.ProductRepository;
 import com.daniel.market.persistence.crud.ProductoCrudRepository;
 import com.daniel.market.persistence.entity.Producto;
 import com.daniel.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,10 @@ import java.util.Optional;
 @Repository//se le indica a spring que esta clase se encarga de interactuar con la BD, aqui se hacen las operaciones en las tablas
 //Component generaliza es mejor repository
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+
+    @Autowired//tiene que ser un componente de Spring
     private ProductMapper mapper;
 
     @Override
