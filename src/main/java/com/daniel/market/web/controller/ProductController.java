@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController//garantiza a esta clase va a ser un controlador de una API Rest
 @RequestMapping("/products")
